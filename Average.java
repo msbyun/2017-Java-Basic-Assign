@@ -1,16 +1,27 @@
 import java.util.Scanner;
 
-public class Average {Â 
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
-        System.out.print("ìž…ë ¥í•  ìµœëŒ€ ì‹¤ìˆ˜ì˜ ê°¯ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”. >> ");Â Â Â Â 
-        Scanner input = new Scanner(System.in);Â Â 
-        int size = input.nextInt();Â Â Â Â 
-        System.out.println("\nì¤‘ê°„ì— 0ì„ ìž…ë ¥í•˜ë©´ ì´ì „ ìž…ë ¥ìžë£Œë¡œ ê³„ì‚°í•˜ê³  ì¢…ë£Œí•©ë‹ˆë‹¤.");Â Â 
-        System.out.print("ì‹¤ìˆ˜ " + size + "ê°œë¥¼ ìž…ë ¥í•˜ì„¸ìš”. >> ");Â Â Â Â 
-        
-Â Â       //í”„ë¡œê·¸ëž˜ë° í•˜ì„¸ìš”.
-        
-        System.out.println("í•©: " + sum + ", í‰ê· : " + sum/size);
-    }
+public class Average {
+	public static void main(String[] args) {
+		double sum = 0;
+		int count = 0;
+				
+		System.out.print("ÀÔ·ÂÇÒ ÃÖ´ë ½Ç¼öÀÇ °¹¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä. >> ");
+		Scanner input = new Scanner(System.in);
+
+		int size = input.nextInt();
+		double num[] = new double[size];
+
+		System.out.println("\nÁß°£¿¡ 0À» ÀÔ·ÂÇÏ¸é ÀÌÀü ÀÔ·ÂÀÚ·á·Î °è»êÇÏ°í Á¾·áÇÕ´Ï´Ù.");
+		System.out.print("½Ç¼ö " + size + "°³¸¦ ÀÔ·ÂÇÏ¼¼¿ä. >> ");
+
+		for (int i = 0; i < size; i++) {
+			num[i] = input.nextDouble();
+			if (num[i] == 0)
+				break;
+			sum += num[i];
+			count += 1;
+		}
+
+		System.out.println("ÇÕ: " + sum + ", Æò±Õ: " + sum/count);
+	}
 }
